@@ -28,6 +28,9 @@ class BFList(list):
   def foldLeft(self, f, initial):
     return functools.reduce(f, self, initial)
     
+  def sort(self, *args, **kwargs):
+    return BFList(sorted(self, *args, **kwargs))
+  
   def reverse(self):
     return BFList(self[::-1])
     
